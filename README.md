@@ -43,9 +43,24 @@ uvicorn main:app --reload
 docker run --rm -p 8000:80 -e DB_HOST="<your address>:4001" wvoliveira/fasrq:0.0.1
 ```
 
+Or run with make (using docker)
+
+```bash
+# build API
+make build
+
+# run database
+make rqlite_run
+
+# in another shell, run API
+make run
+```
+
 Access to <localhost:8000/docs> and be happy.
 
 Make GET/PUT/POST/DELETE methods in /docs endpoint.
+
+To clean database and cache, execute: `make clean`
 
 ## Routes
 
