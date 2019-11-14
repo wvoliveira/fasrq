@@ -5,9 +5,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from marshmallow_sqlalchemy import ModelSchema
 
-RQLITE_HOST = getenv('RQLITE_HOST', 'localhost:4001')
-RQLITE_USERNAME = getenv('RQLITE_USERNAME', 'bob')
-RQLITE_PASSWORD = getenv('RQLITE_PASSWORD', 'secret1')
+RQLITE_HOST = getenv('DB_HOST', 'localhost:4001')
+RQLITE_USERNAME = getenv('DB_USERNAME', 'bob')
+RQLITE_PASSWORD = getenv('DB_PASSWORD', 'secret1')
 
 
 app = FastAPI()

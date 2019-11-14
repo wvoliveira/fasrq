@@ -1,0 +1,12 @@
+[
+    {
+      "username": "bob",
+      "password": "secret1",
+      "perms": ["all"]
+    },
+    {
+      "username": "mary",
+      "password": "$2a$10$fKRHxrEuyDTP6tXIiDycr.nyC8Q7UMIfc31YMyXHDLgRDyhLK3VFS",
+      "perms": ["query", "status"]
+    }
+]
