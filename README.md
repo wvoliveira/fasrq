@@ -30,7 +30,7 @@ Just run theses commands:
 
 ```bash
 mkdir data # for database
-docker run --rm -v $(pwd)/conf:/rqlite/conf -v $(pwd)/data:/rqlite/file/data -p 4001:4001 rqlite/rqlite:4.5.0 -auth /rqlite/conf/rqlite.json
+docker run --rm -v ${PWD}/conf:/rqlite/conf -v ${PWD}/data:/rqlite/file/data -p 4001:4001 rqlite/rqlite:4.5.0 -auth /rqlite/conf/rqlite.json
 ```
 
 In another terminal just run application:
