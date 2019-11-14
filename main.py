@@ -1,5 +1,5 @@
 from os import getenv
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -73,3 +73,14 @@ def post_item(task: str, id: int = None):
 
     result = schema.dump(item)
     return result
+
+
+@app.delete('/{id}')
+def delete_item(id: int):
+    item = session.query(Todo).filter_by(id=id).first()
+    if item is None:
+        raise HTTPException(status_code=404, detail='item not found')
+
+    session.delete(item)
+    session.commit()
+    return "OK"
