@@ -1,6 +1,6 @@
 # fasrq
 
-Example api with Fast API + Rqlite with authentication
+Example API with framework FastAPI and database Rqlite with authentication
 
 ## Tested
 
